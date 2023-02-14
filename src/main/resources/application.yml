@@ -1,0 +1,25 @@
+debug: true
+server:
+  port: 80
+  servlet:
+    context-path: /
+     
+spring:
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/sales?createDatabaseIfNotExist=true
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  security:
+    oauth2:
+      client:
+        registration:
+         facebook:
+          clientId: 551468173628247
+          clientSecret: 1c3383972d732463bcdf8e7b9d6b1719
+          scope:
+           - email
+           - public_profile      
